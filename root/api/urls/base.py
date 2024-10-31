@@ -3,6 +3,7 @@ from drf_yasg.views import get_schema_view
 from rest_framework import permissions
 
 from .users import urlpatterns as users_urlpatterns
+from .category import urlpatterns as category_urlpatterns
 from django.urls import path, include
 
 schema_view = get_schema_view(
@@ -32,4 +33,5 @@ urlpatterns = (
         ),
     ]
     + users_urlpatterns
+    + category_urlpatterns
 )
